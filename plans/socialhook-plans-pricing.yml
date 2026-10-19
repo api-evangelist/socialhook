@@ -1,0 +1,17 @@
+generated: '2026-10-19'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://socialhook.io/en/pricing
+sources:
+- https://socialhook.io/en/pricing
+- https://socialhook.io/en/blog/whatsapp-api-pricing
+name: Lead Lock Systems pricing
+audience: business-product
+pricing_basis: flat-platform
+plans:
+- name: Standard
+  price_text: $50/month
+  price: 50
+  description: Unlimited messages, conversations, contacts across Facebook Messenger, Instagram DM, and WhatsApp Business API. No per‑message
+    fees, no hidden fees.
+docs: https://socialhook.io/en/pricing

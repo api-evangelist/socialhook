@@ -1,0 +1,22 @@
+generated: '2026-10-19'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://socialhook.io/en/features/facebook
+sources:
+- https://socialhook.io/en/features/facebook
+- https://socialhook.io/en/features/instagram
+- https://socialhook.io/en/features/whatsapp
+- https://socialhook.io/en/blog/how-to-build-whatsapp-chatbot-webhooks
+description: Lead Lock Systems (SocialHook) provides a single webhook event named "message.received" for Facebook Messenger, Instagram Direct,
+  and WhatsApp Business messages. Each inbound message—text, media, or status update—triggers this event with a structured payload containing
+  platform, timestamp, sender information, message content, and conversation identifiers.
+events:
+- event: message.received
+  description: Every inbound message (text, media, or status update) from Facebook Messenger, Instagram Direct, or WhatsApp Business triggers
+    a webhook with the sender’s details, message content, and conversation ID.
+delivery:
+  signature: HMAC‑SHA256
+  content_type: application/json
+note: Security is enforced via an X‑SocialHook‑Signature header containing an HMAC‑SHA256 hash of the payload, as described in the WhatsApp documentation
+  and blog guide. No explicit retry policy is documented on the pages.
+docs: https://socialhook.io/en/features/facebook

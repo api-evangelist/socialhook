@@ -1,0 +1,92 @@
+openapi: 3.1.0
+info:
+  title: Lead Lock Systems API
+  version: '2026-10-19'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-19: 3 operation(s) read from 1 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Lead Lock Systems has published no machine-readable contract
+    that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 3
+    documentation: 0
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-19'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://socialhook.io/en/docs/outbound-api
+servers:
+- url: https://api.socialhook.io
+paths:
+  /api/v1/outbound/$USER_ID/send:
+    post:
+      operationId: post_api_v1_outbound_USER_ID_send
+      tags:
+      - Api
+      summary: POST /api/v1/outbound/$USER_ID/send
+      x-source: https://socialhook.io/en/docs/outbound-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST https://api.socialhook.io/api/v1/outbound/$USER_ID/send  -H \"Content-Type: application/json\"  -H \"X-Socialhook-Timestamp:\
+          \ $TS\"  -H \"X-Socialhook-Signature: sha256=$SIG\"  -d \"$BODY\" Important: sign the exact raw body bytes you send. Re-serializing\
+          \ JSON between signing and POSTing changes the bytes and breaks the signature. 4. Request body per platform WhatsApp JSON {\n \"platform\"\
+          : \"what"
+  /api/v1/outbound/${USER_ID}/send:
+    post:
+      operationId: post_api_v1_outbound_USER_ID_send
+      tags:
+      - Api
+      summary: POST /api/v1/outbound/${USER_ID}/send
+      x-source: https://socialhook.io/en/docs/outbound-api
+      parameters:
+      - name: USER_ID
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: javascript
+        snippet: "fetch(\n `https://api.socialhook.io/api/v1/outbound/${USER_ID}/send`,\n {\n method: 'POST',\n headers: {\n 'Content-Type': 'application/json',\n\
+          \ 'X-Socialhook-Timestamp': ts,\n 'X-Socialhook-Signature': `sha256=${sig}`,\n },\n body,\n }\n)"
+  /api/v1/outbound/{youruserid}:
+    post:
+      operationId: post_api_v1_outbound_youruserid
+      tags:
+      - Api
+      summary: POST /api/v1/outbound/{yourUserId}
+      x-source: https://socialhook.io/en/docs/outbound-api
+      parameters:
+      - name: youruserid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: httpie
+        snippet: HTTP POST https://api.socialhook.io/api/v1/outbound/<your_user_id>/send
+tags:
+- name: Api
+components:
+  securitySchemes:
+    X-SocialHook-Signature:
+      type: apiKey
+      in: header
+      name: X-SocialHook-Signature
+      x-source: https://socialhook.io/en/security
+security:
+- X-SocialHook-Signature: []

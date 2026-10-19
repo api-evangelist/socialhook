@@ -1,0 +1,18 @@
+generated: '2026-10-19'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://socialhook.io/en/changelog
+sources:
+- https://socialhook.io/en/changelog
+entries:
+- breaking: false
+  highlights:
+  - SocialHook launches SocialHook is live.
+  - Meta messaging webhook infrastructure for developers and agencies — Facebook, Instagram, and WhatsApp delivering instant JSON payloads to
+    your server.
+  - $50/month flat, unlimited messages.
+  - New Facebook Messenger webhooks — Connect any Facebook Page.
+  date: '2026-04-09'
+current_version: v1.0.0
+note: Only one changelog entry is listed on the page; no breaking change is indicated. Highlights are taken directly from the listed entry.
+docs: https://socialhook.io/en/changelog

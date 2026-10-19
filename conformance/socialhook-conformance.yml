@@ -1,0 +1,32 @@
+generated: '2026-10-19'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://socialhook.io/en/security
+sources:
+- https://socialhook.io/en/security
+- https://socialhook.io/en/privacy
+- https://socialhook.io/en/blog/whatsapp-webhook-security
+standards:
+- id: gdpr
+  conforms: true
+  evidence: Your rights under GDPR and other laws ... If you are in the EU/EEA, UK, or California, you have the following rights regarding your
+    personal data
+- id: soc2
+  conforms: true
+  evidence: All infrastructure runs on AWS with SOC 2 / ISO 27001 certification.
+- id: iso-27001
+  conforms: true
+  evidence: All infrastructure runs on AWS with SOC 2 / ISO 27001 certification.
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: 'securitySchemes: X-SocialHook-Signature (apiKey)'
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+docs: https://socialhook.io/en/security

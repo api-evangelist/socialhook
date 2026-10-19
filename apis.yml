@@ -1,27 +1,124 @@
 aid: socialhook
+
 name: Lead Lock Systems
-description: 'Lead Lock Systems is a company surfaced via the API Evangelist harvest backlog (source:
-  g2-catalog) and added to the network as a stub for full-pipeline profiling.'
+
+description: Lead Lock Systems provides a platform that aggregates and forwards webhooks from major social media channels such as Facebook, Instagram,
+  and WhatsApp to a user‑specified endpoint. It enables businesses to receive real‑time messaging events, automate workflows, and integrate with
+  CRM or AI systems without building direct connections to each social network. The service offers instant webhook delivery, a simple pricing
+  model, and a developer‑friendly documentation site covering quickstart, payload reference, and security guidelines.
+
 url: https://raw.githubusercontent.com/api-evangelist/socialhook/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-19 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-18'
+
 modified: '2026-10-18'
+
 tags:
 - Company
-apis: []
+- Webhooks
+- Social Media
+- Integration
+- Automation
+
+image: https://socialhook.io/favicon.ico
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: RateLimits
+  url: rate-limits/socialhook-rate-limits.yml
+- type: Plans
+  url: plans/socialhook-plans-pricing.yml
+- type: Spectral
+  url: rules/socialhook-rules.yml
+- type: Vocabulary
+  url: vocabulary/socialhook-vocabulary.yml
+- type: Webhooks
+  url: asyncapi/socialhook-webhooks.yml
+- type: ChangeLog
+  url: changelog/socialhook-changelog.yml
+- type: Authentication
+  url: authentication/socialhook-authentication.yml
+- type: Conformance
+  url: conformance/socialhook-conformance.yml
+- type: LLMsTxt
+  url: llms/socialhook-llms.txt
+- type: Hosts
+  url: hosts/socialhook-hosts.yml
+- type: Security
+  url: https://socialhook.io/en/security
+- type: Login
+  url: https://socialhook.io/login
+- type: ChangeLog
+  url: https://socialhook.io/en/changelog
 - type: VulnerabilityDisclosure
   url: security/socialhook-vulnerability-disclosure.yml
 - type: DomainSecurity
   url: security/socialhook-domain-security.yml
 - type: Website
   url: https://socialhook.io/
+- type: GettingStarted
+  url: https://socialhook.io/en/docs/quickstart
+- type: Pricing
+  url: https://socialhook.io/en/pricing
+- type: Blog
+  url: https://socialhook.io/en/blog
+- type: Support
+  url: https://socialhook.io/en/support
+- type: TermsOfService
+  url: https://socialhook.io/en/terms
+- type: PrivacyPolicy
+  url: https://socialhook.io/en/privacy
+
+apis:
+- name: Socialhook API
+  description: Provides webhook aggregation for social media platforms. Documentation at https://socialhook.io/en/docs. No machine‑readable contract
+    discovered.
+  humanURL: https://socialhook.io/en/docs
+  baseURL: null
+  aid: socialhook:socialhook-api-2
+- aid: socialhook:socialhook-api
+  name: Lead Lock Systems API
+  description: 'Lead Lock Systems API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist (2026-10-19);
+
+    not the provider''s own document.'
+  humanURL: https://socialhook.io/en/docs/outbound-api
+  baseURL: https://api.socialhook.io
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/socialhook-openapi-generated.yml
+    x-provenance: generated
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other contract found on api.socialhook.io or socialhook.io despite probing known spec endpoints.
+  evidence:
+  - url: https://api.socialhook.io/openapi.json
+    status: 404
+  - url: https://api.socialhook.io/openapi.yaml
+    status: 404
+  - url: https://socialhook.io/openapi.json
+    status: 307
+  - url: https://socialhook.io/openapi.yaml
+    status: 307
+  checked: '2026-10-19'
+x-enrichment:
+  date: '2026-10-19'
+  status: enriched
+  artifacts_added: 18
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

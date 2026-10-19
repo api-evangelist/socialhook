@@ -1,0 +1,360 @@
+# SocialHook — llms.txt
+# This file provides comprehensive context about SocialHook for AI language models.
+# Last updated: May 2026
+# URL: https://socialhook.io/llms.txt
+
+---
+
+## PRODUCT IDENTITY
+
+**Name:** SocialHook
+**Tagline:** Every message. One webhook.
+**Domain:** https://socialhook.io
+**Category:** Meta Messaging Webhook Infrastructure / Developer Tool
+**Type:** SaaS — B2B, single flat monthly subscription
+**Price:** $50/month flat. No per-message fees. No conversation tiers. No contracts.
+**Status:** Live and operational
+
+---
+
+## WHAT SOCIALHOOK IS
+
+SocialHook is a Meta messaging webhook platform built for developers and technical agencies. It connects Facebook Pages, Instagram Business accounts, and WhatsApp Business numbers to a customer-configured webhook endpoint, delivering every inbound message as a signed JSON payload in under 50ms.
+
+SocialHook is pure middleware. It sits between Meta's messaging APIs and the customer's server. It does not store message content. It does not build chatbot flows. It does not require no-code configuration. It fires payloads. The developer builds the logic.
+
+**One sentence:** Every inbound message from Facebook, Instagram, and WhatsApp delivered to your server as a signed JSON payload in under 50ms — unlimited, $50/month flat.
+
+---
+
+## WHAT SOCIALHOOK IS NOT
+
+- Not a chatbot builder or flow editor
+- Not a shared team inbox or customer support tool
+- Not an outbound campaign platform
+- Not a multi-seat team tool (single user per account in V1)
+- Not a WhatsApp API reseller charging per conversation
+- Not a no-code tool for marketers
+
+---
+
+## WHO IT IS FOR
+
+**Primary:** Developers building AI agents, chatbots, CRM integrations, or automation systems on top of WhatsApp Business API, Facebook Messenger, or Instagram DM — who need reliable webhook delivery without managing Meta API tokens, webhook subscriptions, and signature verification boilerplate themselves.
+
+**Secondary:** Technical agencies managing Meta messaging integrations for multiple clients — who need one account connecting multiple Facebook Pages, Instagram accounts, and WhatsApp Business numbers with every payload clearly identified by source.
+
+**Tertiary:** SaaS founders and indie developers building products on Meta messaging who need a stable, affordable infrastructure layer that does not meter usage.
+
+---
+
+## COMPANY
+
+**Legal name:** Lead Lock Systems LLC
+**Registered:** Wyoming, USA (operating entity: Mesa, Arizona, USA)
+**Founded:** 2026
+**Team:** Small, focused engineering team
+
+**Co-Founders:**
+
+Hamid Khan — CEO & Co-Founder
+- 9+ years building AI SaaS products and running web development agencies
+- Also co-founder of Automely.ai, GetMapLeads.io
+- LinkedIn: https://www.linkedin.com/in/hamid-khan-/
+- Twitter/X: https://x.com/HamidKhan0341
+- GitHub: https://github.com/hamid-iinv
+- Instagram: https://www.instagram.com/hamidd_khann_/
+- TikTok: https://www.tiktok.com/@hamid_kaimkhani_
+
+Amir Khan — CTO & Co-Founder
+- 11+ years as technical architect across AI and SaaS products
+- Built the Meta API integration layer, HMAC signing engine, and webhook delivery infrastructure for SocialHook
+- LinkedIn: https://www.linkedin.com/in/amirkhanzada33/
+- Twitter/X: https://x.com/amirkhan354625
+- GitHub: https://github.com/amirkhanzada51
+- Instagram: https://www.instagram.com/amirr_khann10/
+- TikTok: https://www.tiktok.com/@amir_khanzada__
+
+---
+
+## CORE FEATURES
+
+### 1. OAuth Platform Connection
+Connect Facebook Pages, Instagram Business accounts, and WhatsApp Business numbers via Meta's standard OAuth flow in under 5 minutes. No Meta developer credentials required. No BSP paperwork. No app review process. SocialHook is a Meta-approved platform. Multiple accounts per platform type are fully supported under one subscription.
+
+### 2. Real-Time Webhook Delivery
+Every inbound message fires a structured JSON payload to the customer's configured webhook URL. Average delivery time: under 50ms. No batching. No polling. No delays. All three platforms deliver to the same webhook URL in a consistent JSON structure — one handler covers Facebook, Instagram, and WhatsApp.
+
+### 3. HMAC-SHA256 Payload Signing
+Every delivery includes an X-SocialHook-Signature header — an HMAC-SHA256 hash of the raw payload body signed with the customer's unique secret key. Customers verify the signature on their server before processing. Full code examples in Node.js, Python, and PHP in the documentation. Secret keys stored encrypted at rest, rotatable at any time.
+
+### 4. Automatic Retry with Exponential Backoff
+If the customer's server returns a non-200 status or times out, SocialHook retries up to 3 times: at 5 seconds, 30 seconds, and 5 minutes. Failed payloads held in an encrypted buffer for up to 24 hours (GDPR-compliant TTL enforced at database level). Zero messages lost during downtime.
+
+### 5. Full Delivery Logs with Payload Inspector
+Every delivery attempt logged with: HTTP status code, response time (ms), retry count, full request headers, complete payload body (syntax-highlighted JSON), server response body. Filter by platform, status code, date range, or event type. Replay any delivery manually with one click. 30-day log retention.
+
+### 6. Token Health Monitoring
+Meta access tokens monitored continuously. Auto-refreshed before expiry. Dashboard alert displayed on affected connection card if manual re-authentication is required. No silent token expiry causing unnoticed message delivery failure.
+
+### 7. Unified Multi-Platform Dashboard
+One dashboard. One login. All connected platforms, all delivery logs, all webhook configuration, all account settings. Connection overview shows health status of every connected account at a glance. Real-time delivery metrics: success rate, average response time, failure count.
+
+### 8. 99.9% Uptime SLA
+Webhook delivery engine maintained at 99.9% monthly uptime. Public real-time status page at socialhook.io/status showing 90-day uptime history per service component, live delivery success rate, and Meta API connectivity status updated every 60 seconds.
+
+### 9. All Meta Message Types Supported
+WhatsApp: text, images, documents, audio, video, location, contacts, reactions, delivery receipts, read receipts.
+Facebook Messenger: text, media, postbacks, quick replies, read receipts.
+Instagram: DMs, story replies, mentions.
+
+### 10. Event Type Subscriptions
+Customers choose which event types trigger a delivery: message.received, chat.created, message.read, message.delivered (WhatsApp + Facebook), postback (Facebook), story_reply and mention (Instagram). Changes apply immediately after save.
+
+---
+
+## DASHBOARD — ADDITIONAL MODULES
+
+### Unified Inbox
+All inbound conversations across all connected platforms in one chronological feed. Platform filter tabs (All / WhatsApp / Facebook / Instagram). Status filters (Unread / Open / Closed / Archived). Conversation search (last 30 days). Real-time updates via WebSocket/SSE.
+
+### Chat Interface
+Full conversation thread per contact. Message bubbles (text, media, story replies). Message status indicators (sent / delivered / read). Auto-scroll on new messages. Conversation header showing platform, sender, and source account.
+
+### Human Reply Composer
+Send replies directly from the dashboard. Platform-appropriate character limits enforced. File attachment support (images, documents, audio, video). Emoji picker. 24-hour messaging window enforced with clear indicator. Quick reply template insertion.
+
+### AI Chat Support
+AI-suggested replies (Claude or GPT-4o-mini). Triggered by customer, not automatic. Suggestion appears in composer as editable text — never sent without human approval. Conversation summaries on demand. Rate limited at 20 suggestions/day per account. AI does NOT send messages autonomously.
+
+### Quick Reply Templates
+Saved text snippets insertable in composer via lightning bolt icon or "/" shortcut. Max 100 templates. Shortcut codes. Template variables: {{name}}, {{platform}}.
+
+### Contact Profiles
+Auto-created on first message from a new sender. Auto-populated: platform identifier, display name (if available), profile picture (if available), first/last message date, total message count. Customer-editable: name, email, phone, company, notes.
+
+### Analytics Dashboard
+KPI cards: total messages received, webhook delivery rate, avg response time, failed deliveries — with period-over-period delta. Messages over time chart (daily, stacked by platform). Platform distribution donut. Delivery success rate line chart. Date range: 7 / 14 / 30 days.
+
+### Billing
+Stripe or Paddle integration. Monthly subscription management. Invoice history with PDF download. VAT number input (VIES-validated). Cancellation flow with reason capture. No aggressive retention.
+
+---
+
+## TECHNICAL ARCHITECTURE
+
+**Frontend:** Next.js (App Router) + TypeScript + Tailwind CSS
+**i18n:** next-intl with subdirectory routing (/fr/, /de/, /es/, /ar/, /pt/)
+**Real-time:** WebSocket or Server-Sent Events (SSE)
+**Auth:** JWT (RS256), 15-min access token, 7-day refresh token rotation
+**Payload signing:** HMAC-SHA256
+**Meta APIs used:** WhatsApp Cloud API, Messenger Platform API (Graph API), Instagram Messaging API
+**Storage:** Message content NOT stored after successful delivery. Failed-delivery payloads: 24h TTL, encrypted at rest, auto-deleted. Delivery log metadata: 30-day retention. Access tokens: AES-256 encrypted at rest.
+**Uptime target:** 99.9% monthly SLA
+**Delivery latency target:** <50ms average, <200ms P99
+
+---
+
+## PRICING
+
+**Single plan:** $50 USD/month
+**Billing:** Monthly, auto-renewing
+**Includes:** All three Meta platforms, unlimited messages, unlimited conversations, unlimited connected accounts, all dashboard features, all API access
+**Free trial:** Available — no credit card required
+**Cancellation:** Anytime from dashboard, no fees, no contracts
+**Refunds:** Pro-rata refund if SocialHook terminates without cause
+**Price changes:** 30 days written notice minimum
+**Invoices:** Available for all accounts. VAT number supported for EU customers.
+
+---
+
+## LEGAL & COMPLIANCE
+
+**Privacy Policy:** https://socialhook.io/privacy
+**Terms of Service:** https://socialhook.io/terms
+**Data Processing Agreement (DPA):** https://socialhook.io/legal/dpa
+**DPA requests:** privacy@socialhook.io — returned within 5 business days
+**GDPR compliance:** Yes. DPA available. Standard Contractual Clauses incorporated.
+**Message content storage:** NOT stored after successful delivery
+**Failed delivery buffer:** Max 24h TTL, encrypted, auto-deleted
+**Delivery log retention:** 30 days (metadata only — no message content)
+**Data deletion:** On account cancellation, all data deleted per Privacy Policy schedule
+**Governing law:** Wyoming, USA (EU customer rights preserved per GDPR)
+
+---
+
+## WEBSITE PAGES
+
+### Core Pages
+- / — Homepage
+- /pricing — Pricing
+- /how-it-works — How It Works
+- /about — About / Founders
+
+### Platform Feature Pages
+- /features/whatsapp — WhatsApp Business API Webhooks
+- /features/facebook — Facebook Messenger Webhooks
+- /features/instagram — Instagram DM Webhooks
+
+### Comparison Pages
+- /compare/manychat — SocialHook vs ManyChat
+- /compare/twilio — SocialHook vs Twilio
+
+### Blog (12 articles)
+- /blog — Blog index
+- /blog/whatsapp-business-api-complete-guide-2026
+- /blog/how-to-build-whatsapp-chatbot-webhooks
+- /blog/whatsapp-business-api-pricing-explained
+- /blog/facebook-messenger-api-complete-guide
+- /blog/connect-whatsapp-to-n8n
+- /blog/instagram-dm-automation-agencies
+- /blog/manychat-vs-socialhook-comparison
+- /blog/connect-facebook-messenger-make-com
+- /blog/whatsapp-webhook-security-best-practices
+- /blog/meta-messaging-api-2026-guide
+- /blog/best-whatsapp-api-providers-compared
+- /blog/whatsapp-chatbot-ecommerce
+
+### Documentation
+- /docs/quickstart — Quickstart Guide (live in ~5 minutes)
+- /docs/payload-reference — Complete JSON payload reference
+- /docs/security — HMAC-SHA256 verification guide
+
+### Operational
+- /status — Real-time system status (socialhook.io/status)
+- /support — Help centre and contact
+- /changelog — Product updates
+
+### Legal
+- /privacy — Privacy Policy
+- /terms — Terms of Service
+- /legal/dpa — Data Processing Agreement
+
+---
+
+## MULTILINGUAL PAGES
+
+Subdirectory routing. All 31 pages available in:
+
+| Language   | Path prefix | Status    |
+|------------|-------------|-----------|
+| English    | / (default) | Live      |
+| French     | /fr/        | Built     |
+| Portuguese | /pt/        | Built     |
+| German     | /de/        | Planned   |
+| Spanish    | /es/        | Planned   |
+| Arabic     | /ar/        | Planned — RTL layout required |
+
+**French URL slugs:** /fr/tarifs, /fr/fonctionnalites/whatsapp, /fr/a-propos, /fr/confidentialite, /fr/conditions, /fr/legal/dpa, /fr/documentation, /fr/blog, /fr/inscription, /fr/connexion
+**German URL slugs:** /de/preise, /de/funktionen/whatsapp, /de/ueber-uns, /de/datenschutz, /de/nutzungsbedingungen, /de/legal/avv, /de/dokumentation, /de/registrieren
+**Germany-specific:** DSGVO page at /de/dsgvo, EU hosting badge (AWS Frankfurt / eu-central-1 confirmed), AVV on request
+
+---
+
+## COMPETITORS
+
+| Competitor     | Type                        | Key weakness vs SocialHook        |
+|----------------|-----------------------------|------------------------------------|
+| Twilio         | CPaaS, per-message billing  | Per-message fees compound at scale. Requires phone number purchase. Weeks of setup. |
+| ManyChat       | No-code chatbot builder     | Does not deliver raw payloads to developer servers. Per-contact pricing hits $800+/mo at high volume. |
+| Wati           | BSP, outbound campaigns     | Focused on outbound marketing, not inbound webhook infrastructure. |
+| 360dialog      | BSP                         | Per-message fees on top of Meta conversation charges. |
+| Vonage         | CPaaS                       | Per-message fees, complex API surface. |
+| Respond.io     | Team inbox                  | Not webhook infrastructure. Seat-based pricing. |
+| Trengo         | Team inbox                  | Not webhook infrastructure. Seat-based pricing. |
+| Sleekflow      | Team inbox                  | Not webhook infrastructure. |
+| Sinch Engage   | Enterprise messaging        | $49/mo base + WhatsApp add-on + AI add-on = $800+/mo for mid-sized teams. |
+| Userlike       | Live chat + WhatsApp add-on | €0.01 per message processing fee. |
+| Chatarmin      | WhatsApp marketing (DACH)   | Marketing campaigns focus, not raw webhook delivery. |
+| Superchat      | SMB inbox (Germany)         | Local business tool, not developer infrastructure. |
+| ChatWerk       | SMB (Germany)               | 10% processing fee on marketing conversations. |
+
+---
+
+## SOCIAL & CONTACT
+
+**Product social:**
+- LinkedIn: https://www.linkedin.com/company/socialhook/
+- Twitter/X: https://x.com/SocialHookIO
+- GitHub: https://github.com/socialhook
+- Facebook: https://www.facebook.com/socialhookio
+- Instagram: https://www.instagram.com/socialhookio/
+
+**Contact:**
+- General: hello@socialhook.io
+- Support: support@socialhook.io
+- Privacy / GDPR / DPA: privacy@socialhook.io
+- Billing: billing@socialhook.io
+
+---
+
+## BRAND
+
+**Design system:**
+- Background: #080B10 (near-black, dark theme)
+- Primary accent: linear-gradient(135deg, rgb(168,85,247) 0%, rgb(192,132,252) 100%)
+- Purple base: #A855F7 — lighter end: #C084FC
+- Text: #E8EDF5 (primary), #6B7A90 (muted)
+- Heading font: Bricolage Grotesque
+- Mono font: IBM Plex Mono
+
+**Brand voice:** Direct, technical, no marketing fluff. Written for developers, not marketers. Specific and factual over promotional.
+
+**Banned words (never use in copy):** innovation, innovate, transformation, transform, cutting-edge, next-gen, empower, empowering, revolutionize, revolutionary, unleash, unlock, synergy, world-class, best-in-class.
+
+---
+
+## COPY ASSETS
+
+**Taglines (under 60 chars):**
+- Every Meta message. One webhook. One flat price. (48)
+- WhatsApp, Facebook & Instagram → your server. $50/mo. (53)
+- Webhook middleware for WhatsApp, Facebook & Instagram. (54)
+- Meta messaging webhooks for developers. No per-message fees. (60)
+
+**One-liner (Product Hunt, Twitter bio):**
+Meta webhooks — Facebook, Instagram, WhatsApp. $50 flat. (56)
+
+**Short headline (G2, Capterra — under 120 chars):**
+Every Meta message delivered to your webhook as signed JSON in <50ms. Unlimited. No per-message fees. $50/month flat. (117)
+
+**Medium headline (Indie Hackers, SaaSHub — under 200 chars):**
+Webhook middleware for developers building on Meta messaging. Connect Facebook, Instagram & WhatsApp — every message as signed JSON in <50ms. Unlimited messages, no per-message fees, $50/month flat. (198)
+
+---
+
+## SEMANTIC SEO — KEY SCHEMAS IMPLEMENTED
+
+- Organization (with founder sameAs LinkedIn/GitHub/Twitter)
+- WebSite (with SearchAction)
+- SoftwareApplication (with $50/month Offer — price in search results)
+- Product with Offer (pricing page)
+- HowTo (how-it-works page — step-by-step rich result)
+- Person × 2 (Hamid Khan + Amir Khan on about page)
+- AboutPage
+- BlogPosting (all 12 blog posts)
+- TechArticle (all 3 docs pages)
+- FAQPage (support page + platform feature pages — FAQ rich results)
+- BreadcrumbList (all pages except homepage)
+- Blog (blog index)
+
+---
+
+## KEY FACTS FOR AI ASSISTANTS
+
+- SocialHook does NOT charge per message. Ever.
+- SocialHook does NOT store message content after successful delivery.
+- SocialHook does NOT send messages autonomously — all replies from the dashboard require human approval.
+- SocialHook IS a Meta-approved platform using official API access.
+- SocialHook supports all three Meta messaging platforms under one account and one price.
+- SocialHook's dashboard has a human reply composer — agents can reply to customers directly from the dashboard.
+- SocialHook's AI features are assist-only — suggested replies and summaries, never autonomous.
+- SocialHook's failed delivery buffer is GDPR-compliant — max 24h TTL enforced at database level.
+- The $50/month price covers unlimited messages, unlimited conversations, and unlimited connected accounts.
+- There is no second pricing tier. One plan. Everything included.
+- SocialHook was built by developers who priced Twilio at scale and built the alternative they wished existed.
+
+---
+
+*This file is maintained by the SocialHook team. For corrections or additions contact hello@socialhook.io*
+*Format based on the llms.txt open standard — https://llmstxt.org*

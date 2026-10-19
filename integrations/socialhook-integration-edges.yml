@@ -1,0 +1,18 @@
+generated: '2026-10-19'
+method: none
+source:
+- https://zapier.com/apps/socialhook/integrations
+- https://zapier.com/apps/lead-lock-systems/integrations
+- https://n8n.io/integrations/socialhook/
+- https://composio.dev/toolkits/socialhook
+- https://monid.ai/tools/socialhook
+checked:
+- https://composio.dev/toolkits/socialhook
+- https://monid.ai/tools/socialhook
+- https://n8n.io/integrations/socialhook/
+- https://zapier.com/apps/lead-lock-systems/integrations
+- https://zapier.com/apps/socialhook/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

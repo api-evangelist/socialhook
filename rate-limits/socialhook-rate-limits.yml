@@ -1,0 +1,17 @@
+generated: '2026-10-19'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://socialhook.io/en/blog/whatsapp-api-rate-limits
+sources:
+- https://socialhook.io/en/blog/whatsapp-api-rate-limits
+name: Lead Lock Systems rate limits
+limits:
+- name: Per-second throughput
+  limit_text: 80 messages/second per phone number
+  max: 80
+  window: second
+headers:
+- Retry-After
+exhaustion_status: 429
+docs: https://socialhook.io/en/blog/whatsapp-api-rate-limits
+note: 5 extracted row(s) were dropped because their quote was not on the page.

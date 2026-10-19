@@ -1,0 +1,19 @@
+generated: '2026-10-19'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://socialhook.io/en/security
+sources:
+- https://socialhook.io/en/security
+- https://socialhook.io/en/docs/quickstart
+- https://socialhook.io/en/blog/whatsapp-webhook-setup-reference
+- https://socialhook.io/en/blog/whatsapp-chatbot-ecommerce
+description: Authentication is performed by verifying an HMAC‑SHA256 signature sent in a request header.
+schemes:
+- type: apiKey
+  name: X-SocialHook-Signature
+  evidence: This hash is sent in the X-SocialHook-Signature HTTP header in the format sha256=<hex_digest> .
+  location: header
+  header: X-SocialHook-Signature
+  how_to_obtain: Generate a secret key in the SocialHook dashboard; the key is used to compute the HMAC‑SHA256 signature for each payload.
+note: No OAuth2, HTTP basic, bearer, JWT, HMAC, MTLS, or other authentication schemes are documented.
+docs: https://socialhook.io/en/security
