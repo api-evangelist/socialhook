@@ -1,0 +1,16 @@
+generated: '2026-10-18'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: socialhook.io
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 18 05:49:07 2026 GMT
+  hsts: false
+domains:
+- domain: socialhook.io
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine

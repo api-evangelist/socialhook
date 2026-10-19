@@ -19,5 +19,9 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: VulnerabilityDisclosure
+  url: security/socialhook-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/socialhook-domain-security.yml
 - type: Website
   url: https://socialhook.io/
