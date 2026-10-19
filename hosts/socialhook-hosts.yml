@@ -31,9 +31,10 @@ hosts:
   - contract-discovery
   - well-known
   types:
+  - Security
+  - Login
+  - ChangeLog
   - Website
-  - Documentation
-  - APIReference
   - GettingStarted
   - Pricing
   - Blog

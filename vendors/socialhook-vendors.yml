@@ -25,9 +25,8 @@ reliance:
     cannot tell those apart
 checked:
 - 'docs-platform: no-docs-host'
+- socialhook.io (Login)
 - socialhook.io (Website)
-- socialhook.io (Documentation)
-- socialhook.io (APIReference)
 - socialhook.io (GettingStarted)
 - socialhook.io (Support)
 - api.socialhook.io (baseURL)
